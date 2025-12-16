@@ -1,6 +1,5 @@
 package dev.andrewhuang.slanglsp
 
-import com.intellij.icons.AllIcons
 import com.intellij.openapi.fileTypes.LanguageFileType
 import javax.swing.Icon
 
@@ -18,6 +17,6 @@ class SlangFileType : LanguageFileType(SlangLanguage) {
     }
 
     override fun getIcon(): Icon {
-        return AllIcons.FileTypes.Image
+        return SlangLanguage.icon
     }
 }
