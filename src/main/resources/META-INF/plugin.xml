@@ -1,0 +1,45 @@
+<!-- Plugin Configuration File: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN, cannot be changed between the plugin versions. -->
+    <id>dev.andrewhuang.SlangLsp</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>SlangLsp</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor url="https://github.com/andyroiiid/SlangLsp">Andrew Huang</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+    <description>
+        &lt;p&gt;A Language Server Protocol (LSP) Plugin for the Slang shading language.&lt;/p&gt;
+        &lt;p&gt;The syntax file is from https://github.com/shader-slang/slang-vscode-extension.&lt;/p&gt;
+        &lt;p&gt;&lt;b&gt;Please make sure &lt;code&gt;slangd&lt;/code&gt; is in your PATH.&lt;/b&gt;&lt;/p&gt;
+    </description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.lsp</depends>
+    <depends>org.jetbrains.plugins.textmate</depends>
+
+    <!-- Extensions defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="Slang Shader"
+                implementationClass="dev.andrewhuang.slanglsp.SlangFileType"
+                language="Slang"
+                extensions="slang"/>
+        <platform.lsp.serverSupportProvider
+                implementation="dev.andrewhuang.slanglsp.SlangLspServerSupportProvider"/>
+        <editorHighlighterProvider
+                filetype="Slang Shader"
+                implementationClass="org.jetbrains.plugins.textmate.language.syntax.highlighting.TextMateEditorHighlighterProvider"/>
+        <lang.syntaxHighlighterFactory
+                language="Slang"
+                implementationClass="org.jetbrains.plugins.textmate.language.syntax.highlighting.TextMateSyntaxHighlighterFactory"/>
+        <textmate.bundleProvider
+                implementation="dev.andrewhuang.slanglsp.SlangTextMateBundleProvider"/>
+    </extensions>
+</idea-plugin>

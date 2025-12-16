@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactName</key>
+	<string>shader-slang</string>
+	<key>description</key>
+	<string>TextMate syntax file from https://github.com/shader-slang/slang-vscode-extension</string>
+	<key>name</key>
+	<string>Slang</string>
+	<key>uuid</key>
+	<string>a946e49b-84a4-492f-9971-71f6955c3347</string>
+</dict>
+</plist>
