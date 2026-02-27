@@ -15,8 +15,9 @@
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description>
         &lt;p&gt;A Language Server Protocol (LSP) Plugin for the Slang shading language.&lt;/p&gt;
-        &lt;p&gt;The syntax file is from https://github.com/shader-slang/slang-vscode-extension.&lt;/p&gt;
-        &lt;p&gt;&lt;b&gt;Please make sure &lt;code&gt;slangd&lt;/code&gt; is in your PATH.&lt;/b&gt;&lt;/p&gt;
+        &lt;p&gt;The syntax file is from https://github.com/shader-slang/slang-vscode-extension&lt;/p&gt;
+        &lt;p&gt;The icon file is from https://github.com/shader-slang/shader-slang.github.io&lt;/p&gt;
+        &lt;p&gt;&lt;b&gt;&lt;code&gt;slangd&lt;/code&gt; path can be configured in Settings -> Tools -> SlangLsp.&lt;/b&gt;&lt;/p&gt;
     </description>
 
     <!-- Product and plugin compatibility requirements.
