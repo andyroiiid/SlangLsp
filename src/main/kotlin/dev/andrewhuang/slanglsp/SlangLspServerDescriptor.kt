@@ -6,11 +6,13 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.platform.lsp.api.ProjectWideLspServerDescriptor
 
 class SlangLspServerDescriptor(project: Project) : ProjectWideLspServerDescriptor(project, "SlangLsp") {
+    private val settings = SlangLspSettings.getInstance(project)
+
     override fun isSupportedFile(file: VirtualFile): Boolean {
         return file.fileType is SlangFileType
     }
 
     override fun createCommandLine(): GeneralCommandLine {
-        return GeneralCommandLine("slangd")
+        return GeneralCommandLine(settings.slangdPath)
     }
 }

@@ -1,3 +1,4 @@
+<!--suppress PluginXmlI18n -->
 <!-- Plugin Configuration File: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN, cannot be changed between the plugin versions. -->
@@ -41,5 +42,9 @@
                 implementationClass="org.jetbrains.plugins.textmate.language.syntax.highlighting.TextMateSyntaxHighlighterFactory"/>
         <textmate.bundleProvider
                 implementation="dev.andrewhuang.slanglsp.SlangTextMateBundleProvider"/>
+        <projectConfigurable
+                parentId="tools"
+                instance="dev.andrewhuang.slanglsp.SlangLspSettingsConfigurable"
+                displayName="SlangLsp"/>
     </extensions>
 </idea-plugin>
