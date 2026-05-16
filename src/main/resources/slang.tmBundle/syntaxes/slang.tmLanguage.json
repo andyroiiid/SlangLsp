@@ -1,6 +1,9 @@
 {
   "name": "Slang",
   "scopeName": "source.slang",
+  "fileTypes": [
+    "slang"
+  ],
   "patterns": [
     {
       "include": "#preprocessor"
@@ -87,7 +90,7 @@
       "include": "#operators"
     }
   ],
-    "repository": {
+  "repository": {
     "attribute-arguments": {
       "patterns": [
         {
